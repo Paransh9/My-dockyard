@@ -27,7 +27,7 @@ A **custom bridge network** offers several advantages:
 ✅ **DNS-Based Resolution** – Containers communicate via names instead of IPs.
 ✅ **Greater Control** – Define specific **subnets, IP ranges, and gateways**.
 
-To demonstrate, we create a **custom bridge network** called `Paransh-marwari` and connect multiple containers.
+To demonstrate, we create a **custom bridge network** called `Paransh` and connect multiple containers.
 
 ---
 
