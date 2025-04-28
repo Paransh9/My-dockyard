@@ -13,7 +13,7 @@ Ensure your project directory is organized as follows:
 ```
 project-directory/
 │── Dockerfile
-│── Tarakk_demo.sql
+│── Paransh_demo.sql
 ```
 
 This structure keeps all necessary files in one place for an efficient setup.
