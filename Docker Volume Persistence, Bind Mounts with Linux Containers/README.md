@@ -39,7 +39,7 @@ docker exec -it alpine_with_bind_mount sh -c "cat /data/testfile.txt"
 ```
 #### 📌 Output:
 ```
-Hello, Tarak!
+Hello, Paransh!
 ```
 This confirms that the file was successfully created and accessible inside the container. 🎉
 
@@ -74,7 +74,7 @@ docker exec -it new_alpine sh -c "cat /data/testfile.txt"
 ```
 #### 📌 Output:
 ```
-Hello, Tarak!
+Hello, Paransh!
 ```
 This confirms that **bind mounts persist data even after a container is removed**. 🔥
 
