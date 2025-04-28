@@ -27,7 +27,7 @@ A **custom bridge network** offers several advantages:
 ✅ **DNS-Based Resolution** – Containers communicate via names instead of IPs.
 ✅ **Greater Control** – Define specific **subnets, IP ranges, and gateways**.
 
-To demonstrate, we create a **custom bridge network** called `tarak-bridge` and connect multiple containers.
+To demonstrate, we create a **custom bridge network** called `Paransh-marwari` and connect multiple containers.
 
 ---
 
@@ -43,18 +43,18 @@ docker network create --driver bridge --subnet 172.20.0.0/16 --ip-range 172.20.2
 ---
 
 ## 🚀 2. Running Containers in the Custom Network
-### Running **Redis Container** (`tarak-database`)
+### Running **Redis Container** (`Paransh-database`)
 ```bash
 docker run -itd --net=tarak-bridge --name=tarak-database redis
 ```
-### Running **BusyBox Container** (`tarak-server-A`)
+### Running **BusyBox Container** (`Paransh-server-A`)
 ```bash
 docker run -itd --net=tara-bridge --name=tarak-server-A busybox
 ```
 
 ### 📌 Check Container IPs
 ```bash
-docker network inspect tarak-bridge
+docker network inspect Paransh-bridge
 ```
 Expected Output:
 ```
@@ -65,11 +65,11 @@ Expected Output:
 ---
 
 ## 🔄 3. Testing Communication Between Containers
-### Ping from **tarak-database** to **tarak-server-A**
+### Ping from **Paransh-database** to **tarak-server-A**
 ```bash
 docker exec -it tarak-database ping 172.20.240.2
 ```
-### Ping from **tarak-server-A** to **tarak-database**
+### Ping from **Paransh-server-A** to **tarak-database**
 ```bash
 docker exec -it tarak-server-A ping 172.20.240.1
 ```
@@ -78,9 +78,9 @@ docker exec -it tarak-server-A ping 172.20.240.1
 ---
 
 ## 🚧 4. Demonstrating Network Isolation with a Third Container
-We add another container (`tarak-server-B`) on the **default bridge network**.
+We add another container (`Paransh-server-B`) on the **default bridge network**.
 ```bash
-docker run -itd --name=tarak-server-B busybox
+docker run -itd --name=Paransh-server-B busybox
 ```
 ### 📌 Get IP of `tarak-server-B`
 ```bash
@@ -91,9 +91,9 @@ docker inspect -format='{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}
 ---
 
 ## ❌ 5. Testing Communication Between Different Networks
-Ping from `tarak-database` to `tarak-server-B`:
+Ping from `Paransh-database` to `Paransh-server-B`:
 ```bash
-docker exec -it tarak-database ping 172.17.0.2
+docker exec -it Paransh-database ping 172.17.0.2
 ```
 🚨 **Expected Outcome:** The ping should **fail**, as they are on different networks.
 
@@ -102,11 +102,11 @@ docker exec -it tarak-database ping 172.17.0.2
 ## 🔍 6. Confirming Network Isolation
 ### Inspect Networks
 ```bash
-docker network inspect tarak-bridge
+docker network inspect Paransh-bridge
 docker network inspect bridge
 ```
-✅ `tarak-bridge` should contain `tarak-database` & `tarak-server-A`.
-✅ `bridge` should contain `tarak-server-B`.
+✅ `Paransh-bridge` should contain `Paransh-database` & `Paransh-server-A`.
+✅ `bridge` should contain `Paransh-server-B`.
 
 ---
 
