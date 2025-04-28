@@ -33,7 +33,7 @@ To demonstrate, we create a **custom bridge network** called `Paransh-marwari` a
 
 ## 🔧 1. Creating a Custom Bridge Network
 ```bash
-docker network create --driver bridge --subnet 172.20.0.0/16 --ip-range 172.20.240.0/20 tarak-bridge
+docker network create --driver bridge --subnet 172.20.0.0/16 --ip-range 172.20.240.0/20 Paransh-bridge
 ```
 ### 🔍 Explanation:
 - `--driver bridge` → Uses the default **bridge network mode**.
@@ -45,11 +45,11 @@ docker network create --driver bridge --subnet 172.20.0.0/16 --ip-range 172.20.2
 ## 🚀 2. Running Containers in the Custom Network
 ### Running **Redis Container** (`Paransh-database`)
 ```bash
-docker run -itd --net=tarak-bridge --name=tarak-database redis
+docker run -itd --net=tarak-bridge --name=Paransh-database redis
 ```
 ### Running **BusyBox Container** (`Paransh-server-A`)
 ```bash
-docker run -itd --net=tara-bridge --name=tarak-server-A busybox
+docker run -itd --net=tara-bridge --name=Paransh-server-A busybox
 ```
 
 ### 📌 Check Container IPs
@@ -58,20 +58,20 @@ docker network inspect Paransh-bridge
 ```
 Expected Output:
 ```
- tarak-database: 172.20.240.1
- tarak-server-A: 172.20.240.2
+ Paransh-database: 172.20.240.1
+ Paransh-server-A: 172.20.240.2
 ```
 
 ---
 
 ## 🔄 3. Testing Communication Between Containers
-### Ping from **Paransh-database** to **tarak-server-A**
+### Ping from **Paransh-database** to **Paransh-server-A**
 ```bash
-docker exec -it tarak-database ping 172.20.240.2
+docker exec -it Paransh-database ping 172.20.240.2
 ```
-### Ping from **Paransh-server-A** to **tarak-database**
+### Ping from **Paransh-server-A** to **Paransh-database**
 ```bash
-docker exec -it tarak-server-A ping 172.20.240.1
+docker exec -it Paransh-server-A ping 172.20.240.1
 ```
 ✅ Expected Outcome: Both containers should successfully **ping** each other.
 
@@ -82,9 +82,9 @@ We add another container (`Paransh-server-B`) on the **default bridge network**.
 ```bash
 docker run -itd --name=Paransh-server-B busybox
 ```
-### 📌 Get IP of `tarak-server-B`
+### 📌 Get IP of `Paransh-server-B`
 ```bash
-docker inspect -format='{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' tarak-server-B
+docker inspect -format='{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' Paransh-server-B
 ```
 (Example IP: `172.17.0.2`)
 
