@@ -56,9 +56,9 @@ CREATE TABLE passengers (
 ### Step 6: Insert Sample Data
 ```sql
 INSERT INTO passengers (name, location) VALUES
-('Tarak', 'Pathankot'),
-('Aryan', 'Jind'),
-('Coach Saab', 'Atta');
+('Paransh', 'Bijnor'),
+('Aryan', 'Roorkee'),
+('Soumil', 'Mohali');
 ```
 
 ---
