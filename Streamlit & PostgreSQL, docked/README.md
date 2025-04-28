@@ -41,7 +41,7 @@ This starts a PostgreSQL container with authentication settings.
 ## 📊 Creating and Populating the Database
 ### Step 4: Access PostgreSQL
 ```sh
-docker exec -it my_postgres_container psql -U tarak -d testdb
+docker exec -it my_postgres_container psql -U Paransh -d testdb
 ```
 
 ### Step 5: Create the `passengers` Table
