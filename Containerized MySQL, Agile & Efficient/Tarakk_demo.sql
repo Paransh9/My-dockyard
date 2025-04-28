@@ -1,5 +1,5 @@
-CREATE DATABASE Tarak;
-use Tarak;
+CREATE DATABASE Paransh;
+use Paransh;
 CREATE TABLE students(
  
 StudentID int not null AUTO_INCREMENT, 
@@ -8,4 +8,4 @@ Surname varchar(100) NOT NULL,
 PRIMARY KEY (StudentID)
 );
 INSERT INTO students (FirstName, Surname)
-VALUES("Tarak", "Katoch"), ("Aryan", "Soni");
+VALUES("Paransh", "Marwari"), ("Aryan", "Soni");
