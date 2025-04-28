@@ -26,7 +26,7 @@ docker swarm init
 This makes your machine the Swarm Manager.
 
 <p align="center">
-  <img src="https://github.com/TarakKatoch/My-Docker-Dockyard/raw/6608dac43e01c02694a65abaaeb704b9cb618708/Microservices%20Architecture%20using%20Docker%20Swarm/assets/Screenshot%202025-03-19%20015611.png" alt="Project Screenshot" />
+  <img src="https://github.com/Paransh9/My-Docker-Dockyard/raw/6608dac43e01c02694a65abaaeb704b9cb618708/Microservices%20Architecture%20using%20Docker%20Swarm/assets/Screenshot%202025-03-19%20015611.png" alt="Project Screenshot" />
 </p>
 
 ## 📁 Project Structure
