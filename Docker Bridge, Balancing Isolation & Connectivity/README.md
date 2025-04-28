@@ -45,11 +45,11 @@ docker network create --driver bridge --subnet 172.20.0.0/16 --ip-range 172.20.2
 ## 🚀 2. Running Containers in the Custom Network
 ### Running **Redis Container** (`Paransh-database`)
 ```bash
-docker run -itd --net=tarak-bridge --name=Paransh-database redis
+docker run -itd --net=Paransh-bridge --name=Paransh-database redis
 ```
 ### Running **BusyBox Container** (`Paransh-server-A`)
 ```bash
-docker run -itd --net=tara-bridge --name=Paransh-server-A busybox
+docker run -itd --net=Paransh-bridge --name=Paransh-server-A busybox
 ```
 
 ### 📌 Check Container IPs
