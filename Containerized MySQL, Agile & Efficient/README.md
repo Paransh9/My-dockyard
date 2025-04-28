@@ -40,7 +40,7 @@ EXPOSE 3306
 Create a file named `Paransh_demo.sql` in the same directory:
 
 ```sql
-CREATE DATABASE Tarak;
+CREATE DATABASE Paransh;
 USE Paransh;
 
 CREATE TABLE students (
